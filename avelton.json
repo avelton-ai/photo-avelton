@@ -1,0 +1,16 @@
+{
+  "name": "Photo Avelton",
+  "slug": "photo-avelton",
+  "domain": "photo.avelton.online",
+  "app_id": "online.avelton.photo",
+  "version": "0.6.0-avelton.1",
+  "upstream": {
+    "repository": "storytold/photocraft",
+    "commit": "7b3ded0f8bec6c801c9cd95311602e077ca891af",
+    "installer_upgrade_code": "D9660F32-2D0A-4ABE-B73D-17BE25F1542C"
+  },
+  "release": {
+    "unsigned": true,
+    "channel": "alpha"
+  }
+}

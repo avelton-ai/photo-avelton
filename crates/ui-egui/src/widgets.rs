@@ -1,4 +1,4 @@
-//! Custom widgets for the Photocraft look: cards with pill tabs, thin sliders with round knobs,
+//! Custom widgets for the Photo Avelton look: cards with pill tabs, thin sliders with round knobs,
 //! monospace value fields with dimmed units, toggle switches, primary/secondary buttons.
 
 use egui::{Align2, Color32, CornerRadius, Pos2, Rect, Response, Sense, Stroke, StrokeKind, Ui, Vec2, pos2, vec2};
@@ -1500,7 +1500,7 @@ pub(crate) fn color_swatch(ui: &mut Ui, color: Color32) -> Response {
     ui.painter().rect_stroke(rect, t.radius_sm, Stroke::new(1.0, t.field_border), StrokeKind::Inside);
     response
 }
-/// A colour swatch that only reports clicks (no popup): for colours edited in PhotoCraft's own
+/// A colour swatch that only reports clicks (no popup): for colours edited in Photo Avelton's own
 /// Color Picker dialog. `label` names it for hover text and accessibility.
 pub fn color_swatch_button(ui: &mut Ui, color: Color32, label: &str) -> Response {
     let t = Tokens::get(ui.ctx());

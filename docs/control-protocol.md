@@ -7,7 +7,7 @@ photocraft --control 7878 --control-token-file /private/path/photocraft-control.
   --automation-read-root /work/project --automation-write-root /work/project
 ```
 
-If the file does not exist, PhotoCraft creates it with a fresh 256-bit token. On Unix the new file is mode `0600`; on Windows, protect it with an appropriate user-only ACL. An existing file is reused. If neither a token nor token file is configured, PhotoCraft generates a token for that launch and writes it to standard error. `PHOTOCRAFT_CONTROL_TOKEN` and `PHOTOCRAFT_CONTROL_TOKEN_FILE` are the environment-variable equivalents.
+If the file does not exist, Photo Avelton creates it with a fresh 256-bit token. On Unix the new file is mode `0600`; on Windows, protect it with an appropriate user-only ACL. An existing file is reused. If neither a token nor token file is configured, Photo Avelton generates a token for that launch and writes it to standard error. `PHOTOCRAFT_CONTROL_TOKEN` and `PHOTOCRAFT_CONTROL_TOKEN_FILE` are the environment-variable equivalents.
 
 The first request on every TCP connection must authenticate. No other method is dispatched before this succeeds:
 
@@ -182,10 +182,10 @@ shortcuts, hidden and coloured menu items, autosave interval and crash recovery,
 log text file. GPU on/off and the GPU tile size apply at the next launch.
 
 The desktop app stores them in `preferences.json` in the platform config directory (macOS
-`~/Library/Application Support/Photocraft`, Windows `%APPDATA%\Photocraft`, Linux
+`~/Library/Application Support/Photo Avelton`, Windows `%APPDATA%\Photo Avelton`, Linux
 `$XDG_CONFIG_HOME/photocraft`; override with `PHOTOCRAFT_CONFIG_DIR`); autosaves go to its
 `Recovery` folder, and the window size and position, the dock width and floating-panel geometry
-to `ui.ron` beside it (a file holding values that would crash startup is discarded). In portable mode (a `portable.txt` or `PhotoCraft.portable` file beside the
+to `ui.ron` beside it (a file holding values that would crash startup is discarded). In portable mode (a `portable.txt` or `Photo Avelton.portable` file beside the
 executable, as in the Windows portable zip) that directory is `PhotoCraftData` next to the
 executable instead. The web build keeps them in `localStorage`. A save writes only the values
 this instance changed since it last loaded or saved them over what storage holds now, so a second

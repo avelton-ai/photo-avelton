@@ -3,7 +3,7 @@
 # exports VERSION and NFPM_ARCH.
 #
 #   nfpm package -f packaging/linux/nfpm.yaml -p deb -t dist/release/
-name: photocraft
+name: photo-avelton
 arch: ${NFPM_ARCH}
 platform: linux
 version: ${VERSION}
@@ -13,8 +13,8 @@ release: 1
 section: graphics
 priority: optional
 maintainer: ${PHOTOCRAFT_MAINTAINER}
-vendor: Learning Machines LLC
-homepage: https://getartcraft.com/apps/photocraft
+vendor: Avelton
+homepage: https://photo.avelton.online
 license: MIT OR Apache-2.0
 description: |-
   Open-source, native image editor with familiar, professional tools.
@@ -66,11 +66,11 @@ overrides:
       - xdg-desktop-portal
 
 contents:
-  - src: ${STAGE}/usr/bin/photocraft
-    dst: /usr/bin/photocraft
+  - src: ${STAGE}/usr/bin/photo-avelton
+    dst: /usr/bin/photo-avelton
     file_info: { mode: 0755 }
-  - src: ${STAGE}/usr/bin/photocraft-cli
-    dst: /usr/bin/photocraft-cli
+  - src: ${STAGE}/usr/bin/photo-avelton-cli
+    dst: /usr/bin/photo-avelton-cli
     file_info: { mode: 0755 }
   - src: ${STAGE}/usr/share/
     dst: /usr/share/

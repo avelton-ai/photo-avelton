@@ -69,4 +69,4 @@ integrate() {
 }
 
 integrate
-exec "$APPDIR/usr/bin/photocraft" "$@"
+exec "$APPDIR/usr/bin/photo-avelton" "$@"

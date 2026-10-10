@@ -252,14 +252,14 @@ mod tests {
         let mut gray = doc();
         gray.mode = photocraft_doc::ColorMode::Grayscale;
         gray.icc_profile = Some(photocraft_engine::color_cmds::working_profile(gray.mode).to_bytes());
-        assert_eq!(profile_name(&gray), "sGray (sRGB tone curve, Photocraft)");
+        assert_eq!(profile_name(&gray), "sGray (sRGB tone curve, Photo Avelton)");
 
         let mut custom = (*photocraft_engine::color_cmds::working_profile(photocraft_doc::ColorMode::Cmyk)).clone();
-        custom.description = "PhotoCraft Studio CMYK".into();
+        custom.description = "Photo Avelton Studio CMYK".into();
         let mut custom_doc = doc();
         custom_doc.mode = photocraft_doc::ColorMode::Cmyk;
         custom_doc.icc_profile = Some(custom.with_encoded_bytes().to_bytes());
-        assert_eq!(profile_name(&custom_doc), "PhotoCraft Studio CMYK");
+        assert_eq!(profile_name(&custom_doc), "Photo Avelton Studio CMYK");
     }
 
     #[test]

@@ -16,7 +16,7 @@ use std::sync::Arc;
 #[cfg(test)]
 mod recovery_tests;
 
-/// Everything File › Open reads: PhotoCraft, Photoshop and Affinity documents, flat images, and
+/// Everything File › Open reads: Photo Avelton, Photoshop and Affinity documents, flat images, and
 /// Photoshop brushes (.abr), gradients (.grd), swatches (.aco, .ase) and keyboard shortcut sets
 /// (.kys), which go to the preset libraries and Edit › Keyboard Shortcuts.
 const OPEN_EXTS: &[&str] = &[
@@ -37,9 +37,9 @@ fn open_filter_extensions(extensions: &[&str]) -> Vec<String> {
 }
 
 /// An explicit SVG filter keeps vector artwork discoverable even when a native picker defaults to
-/// the PhotoCraft-only filter. SVG is also included in All Formats for normal multi-format opens.
+/// the Photo Avelton-only filter. SVG is also included in All Formats for normal multi-format opens.
 fn open_filters() -> Vec<(&'static str, Vec<String>)> {
-    vec![("All Formats", open_filter_extensions(OPEN_EXTS)), ("PhotoCraft", open_filter_extensions(&["pcraft"])), ("SVG", open_filter_extensions(SVG_EXTS))]
+    vec![("All Formats", open_filter_extensions(OPEN_EXTS)), ("Photo Avelton", open_filter_extensions(&["pcraft"])), ("SVG", open_filter_extensions(SVG_EXTS))]
 }
 
 /// File › Save As formats: (filter name, extensions). The filter matching the suggested name's
@@ -47,7 +47,7 @@ fn open_filters() -> Vec<(&'static str, Vec<String>)> {
 /// keeps defaulting to PSD.
 const SAVE_FILTERS: &[(&str, &[&str])] = &[
     ("PSD Document", &["psd", "psb"]),
-    ("PhotoCraft", &["pcraft"]),
+    ("Photo Avelton", &["pcraft"]),
     ("PNG", &["png"]),
     ("JPEG", &["jpg"]),
     ("WebP", &["webp"]),
@@ -500,8 +500,8 @@ mod tests {
     #[test]
     fn xwayland_command_matches_how_photocraft_was_installed() {
         // Flatpak: WAYLAND_DISPLAY doesn't reach the sandbox's socket choice; flatpak's flags do.
-        let flatpak = xwayland_command(Some("ai.storyteller.photocraft"), None, false);
-        assert_eq!(flatpak.as_deref(), Some("flatpak run --nosocket=wayland --socket=x11 ai.storyteller.photocraft"));
+        let flatpak = xwayland_command(Some("online.avelton.photo"), None, false);
+        assert_eq!(flatpak.as_deref(), Some("flatpak run --nosocket=wayland --socket=x11 online.avelton.photo"));
         // AppImage: its own path, quoted for the shell (spaces, quotes).
         let appimage = xwayland_command(None, Some("/home/me/My Apps/it's.AppImage"), true);
         assert_eq!(appimage.as_deref(), Some(r"WAYLAND_DISPLAY= '/home/me/My Apps/it'\''s.AppImage'"));
