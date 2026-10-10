@@ -29,7 +29,8 @@ use crate::math;
 use crate::pipeline::Stage;
 use crate::profile::{ColorSpace, Lut, LutKind, Pcs, Profile, ProfileClass};
 
-pub const DESCRIPTION: &str = "Photo Avelton Coated CMYK (synthetic, 300% TAC, medium GCR)";
+// Match the embedded ICC profile's description so parsing and encoding stay lossless.
+pub const DESCRIPTION: &str = "Photocraft Coated CMYK (synthetic, 300% TAC, medium GCR)";
 
 /// Parameters of the synthetic profile.
 #[derive(Clone, Debug)]

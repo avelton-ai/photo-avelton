@@ -53,7 +53,7 @@ t.eval(&[1.0, 0.0, 0.0], &mut out);                        // exact single colou
 | `rec2020` | Rec. 2020 primaries, Rec. 709 OETF |
 | `gray-gamma-2.2`, `sgray` | gray gamma 2.2; gray with the sRGB curve (default gray working space) |
 | `lab-d50` | Lab identity (v4 encoding) |
-| `coated-cmyk` | **Photo Avelton Coated CMYK (synthetic, 300% TAC, medium GCR)** — default CMYK |
+| `coated-cmyk` | **Photocraft Coated CMYK (synthetic, 300% TAC, medium GCR)** — default CMYK; the upstream ICC description is retained with the profile data |
 
 ### The CMYK profile
 
