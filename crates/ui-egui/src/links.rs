@@ -1,5 +1,5 @@
 //! Community and project links: the Help menu, the About dialog, the start screen and the title
-//! bar all open these. URLs follow the crafting-app pattern (`getartcraft.com/apps/<app>`,
+//! bar all open these. URLs follow the crafting-app pattern (`avelton.online/apps/<app>`,
 //! `github.com/storytold/<app>`).
 
 use serde_json::{Value, json};
