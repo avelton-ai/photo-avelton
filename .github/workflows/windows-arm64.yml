@@ -1,12 +1,6 @@
 name: Windows ARM64
 'on':
-  pull_request:
-    paths:
-    - .github/workflows/windows-arm64.yml
-    - packaging/windows/**
-  schedule:
-  - cron: 41 4 * * *
-  workflow_dispatch: null
+  workflow_dispatch: {}
 concurrency:
   group: windows-arm64-${{ github.ref }}
   cancel-in-progress: true

@@ -1,13 +1,6 @@
 name: FreeBSD
 'on':
-  schedule:
-  - cron: 17 2 * * *
-  pull_request:
-    paths:
-    - .github/workflows/freebsd.yml
-    - packaging/freebsd/**
-    - packaging/env.sh
-  workflow_dispatch: null
+  workflow_dispatch: {}
 concurrency:
   group: freebsd-${{ github.ref }}
   cancel-in-progress: true
