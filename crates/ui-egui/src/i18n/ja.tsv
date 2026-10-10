@@ -712,7 +712,7 @@
 	Photo Avelton Website	Photo Avelton の Web サイト
 	Photo Avelton on GitHub	GitHub 上の Photo Avelton
 	Avelton Website	Avelton の Web サイト
-	Avelton support…	Avelton の Discord に参加…
+	Avelton support…	Avelton サポート…
 	Report an Issue…	問題を報告…
 	WIA Support…	WIA サポート…
 	Apply	適用
@@ -1114,7 +1114,7 @@
 	Invert All	すべて反転
 	Invert has no settings.	階調の反転には設定がありません。
 	Italic	イタリック
-	Avelton support	Discord に参加
+	Avelton support	Avelton サポート
 	Justify all	均等配置(最終行も)
 	Justify last centered	最終行中央揃えの両端揃え
 	Justify last left	最終行左揃えの両端揃え
@@ -3191,7 +3191,6 @@ fontWeight	Italic	斜体
 	Install Plug-in	プラグインをインストール
 	Intersect with	共通部分
 	Intersect with selection  (⇧⌥)	選択範囲との共通部分  (⇧⌥)
-	Avelton support	Avelton の Discord に参加
 	Keep proportions	縦横比を固定
 	Keep view in sync	ビューを同期
 	Keeps the current texture when switching presets.	プリセットを切り替えても現在のテクスチャを維持します。
