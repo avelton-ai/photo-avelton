@@ -1,0 +1,37 @@
+name: Verify existing web bundle
+on:
+  push:
+    branches: [avelton/launch]
+    paths: [scripts/avelton-web-smoke.py, .github/workflows/web-verification.yml]
+  workflow_dispatch:
+    inputs:
+      source_run:
+        description: Release workflow run containing the release-web artifact
+        type: string
+        default: '38043309370'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-web
+          run-id: ${{ inputs.source_run || '38043309370' }}
+          github-token: ${{ github.token }}
+          path: dist/release
+      - name: Install browser tools
+        run: |
+          python3 -m pip install --disable-pip-version-check pillow playwright==1.63.0
+          python3 -m playwright install --with-deps chromium
+      - name: Verify actual release artifact
+        run: xvfb-run -a python3 scripts/avelton-web-smoke.py dist/release/photo-avelton-web-*.zip
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-web
+          path: target/avelton-smoke/

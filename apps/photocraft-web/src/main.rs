@@ -1,4 +1,4 @@
-//! Photocraft in the browser.
+//! Photo Avelton in the browser.
 //!
 //! Runs the same [`photocraft_ui_egui::PhotocraftApp`] as the desktop app through eframe's web
 //! runner (wgpu: WebGPU where available, WebGL2 otherwise). Build with `trunk build --release`

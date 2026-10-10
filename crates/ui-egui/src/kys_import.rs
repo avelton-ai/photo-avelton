@@ -158,7 +158,7 @@ pub fn import_text(app: &mut PhotocraftApp, file_name: &str, text: &str) -> Resu
     if !plan.unknown.is_empty() {
         let u = plan.unknown.len().to_string();
         message.push(' ');
-        message.push_str(&crate::i18n::fmt(tl!("{n} commands are not in PhotoCraft."), &[("n", &u)]));
+        message.push_str(&crate::i18n::fmt(tl!("{n} commands are not in Photo Avelton."), &[("n", &u)]));
     }
     f.insert("tab".into(), json!(0));
     f.insert("overrides".into(), json!(overrides));

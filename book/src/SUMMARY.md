@@ -1,6 +1,6 @@
 # Summary
 
-[PhotoCraft Documentation](README.md)
+[Photo Avelton Documentation](README.md)
 
 # Getting started
 

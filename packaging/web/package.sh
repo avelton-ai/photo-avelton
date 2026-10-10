@@ -41,7 +41,7 @@ for wasm in "$SITE"/*.wasm; do
 done
 [ "$WASM_COUNT" -gt 0 ] || { echo "error: no .wasm in $SITE" >&2; exit 1; }
 
-NAME="photocraft-web-$VERSION"
+NAME="photo-avelton-web-$VERSION"
 WORK="$CARGO_TARGET_DIR/web-package"
 rm -rf "$WORK"
 mkdir -p "$WORK/$NAME"
