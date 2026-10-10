@@ -29,7 +29,7 @@ jobs:
           python3 -m pip install --disable-pip-version-check pillow playwright==1.63.0
           python3 -m playwright install --with-deps chromium
       - name: Verify actual release artifact
-        run: python3 scripts/avelton-web-smoke.py dist/release/photo-avelton-web-*.zip
+        run: xvfb-run -a python3 scripts/avelton-web-smoke.py dist/release/photo-avelton-web-*.zip
       - uses: actions/upload-artifact@v4
         if: always()
         with:
