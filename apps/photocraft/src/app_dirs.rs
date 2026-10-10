@@ -153,7 +153,7 @@ mod tests {
         } else if cfg!(windows) {
             assert_eq!(dir, root.join("appdata").join("Photo Avelton"));
         } else {
-            assert_eq!(dir, root.join("home/.config/photocraft"));
+            assert_eq!(dir, root.join("home/.config/photo-avelton"));
         }
         let _ = std::fs::remove_dir_all(&root);
     }
